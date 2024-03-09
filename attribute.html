@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            /*attr fonksiyonu bir element'in attibutelerine erişmek için kullanılır.
+             Attr metodu içerisine deeğerini almak istediğiniz attributeleri yazınız*/
+            /*a etiketinin içerisindeki wissen isimli attribute'e erişelim*/
+             var wissenValue =   $("a").attr("wissen");
+            /*alert(wissenValue);*/
+            var hrefValue =   $("a").attr("href");
+            /*alert(hrefValue);*/
+
+
+            /*a elementine yeni bir attribute eklemek*/
+            $("a").attr("jquery","güzelbirfrontendteknolojisi");
+
+
+
+            $("img").hover(function(){
+
+               var selectedImage =  $(this).attr("src");
+                $("#bigpicture").attr("src",selectedImage);
+
+            });
+
+
+        });
+
+    </script>
+    <style>
+        .main{
+            width: 50%;
+            height: 300px;
+            border: 2px solid black;
+        }
+        .mainpicture{
+
+            height: 200px;
+            
+        }
+        .imagemini{
+            width: 150px;
+            height: 92px;
+            border-radius: 10px;
+            padding-left: 7px;
+            border:2px solid black
+        }
+        .divimage{
+            align-items: center;
+        }
+        .bigpicture{
+
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a style="color:red;" wissen="Besiktas" href="www.google.com"></a>
+
+
+    <div class="main">
+        <div class="mainpicture"><img id="bigpicture" class="bigpicture"></div>
+        <div class="divimage">
+           <img class="imagemini" src="https://image.hurimg.com/i/hurriyet/75/296x210/65eb7778966e0ad67c151487.jpg">
+           <img class="imagemini" src="https://image.hurimg.com/i/hurriyet/75/296x210/65eb96db1c1eb6d1efce58c8.jpg">
+           <img class="imagemini" src="https://image.hurimg.com/i/hurriyet/75/279x210/65eac69d6545d7c3fc2d1374.jpg">
+           <img class="imagemini" src="https://image.hurimg.com/i/hurriyet/75/182x136/65eaffad966e0ad67c1510e9.jpg">
+
+        </div>
+    </div>
+</body>
+</html>
