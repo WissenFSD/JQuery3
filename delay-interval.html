@@ -18,6 +18,18 @@
                 $("body").css("background-color", selectedColor);
                 $("body").append("<button style='width: 100px;height: 50px;background-color: "+selectedColor+";'>:)</button>");
 
+                var selectedButton;
+                setInterval(() => {
+
+                   var buttons= $("button");
+                    selectedButton=buttons[Math.round(Math.random()*buttons.length)];
+                   $(selectedButton).hide();
+                   delay(100);
+                   $(selectedButton).show();
+                    
+                }, 200);
+                    
+
             }, 100);
 
 
