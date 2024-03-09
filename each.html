@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        .each{
+            
+
+            width: 100px;
+            height: 50px;
+        }
+
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
@@ -11,7 +21,7 @@
 
         $(document).ready(function(){
 
-
+            
            var ul =  $("ul");
             var colors =["Kırmızı","Mavi","Siyah","Pembe"];
             $.each(colors,function(index,value){
@@ -19,10 +29,52 @@
             
             });
 
+
+             $(".buttonCity").click(function(){
+
+                var citys = ["İstanbul","Edirne","İzmir","Kayseri","Antalya","Mersin","Burdur","Bilecik","Düzce","Kartal"];
+                $.each(citys,function(index,value){
+
+                     $("body").append("<p>"+value+"</p>");
+
+                });
+
+
+             });
+             $(".buttonEach").click(function(){
+
+                var buttonColors = ["Black","Red","Yellow","Gray","Green"];
+                var eachButtons= $(".each");
+
+                
+
+                $.each(eachButtons,function(){
+                    
+                    var selectedColor = buttonColors[Math.round(Math.random()*buttonColors.length)];
+                    $(this).css("background-color",selectedColor);
+                    
+
+                });
+
+
+             });
+
+
+
+
         });
     </script>
 </head>
 <body>
  <ul></ul>
+ <button class="buttonCity">P Oluştur</button>
+ <button class="buttonEach">Butonları renklendir</button>
+ <button class="each"></button>
+ <button class="each"></button>
+ <button class="each"></button>
+ <button class="each"></button>
+ <button class="each"></button>
+ <button class="each"></button>
+
 </body>
 </html>
