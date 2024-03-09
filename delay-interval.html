@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            var colors = ["black", "red", "deeppink", "aqua", "aquamarine", "yellow", "orange", "gray"];
+
+            setInterval(() => {
+                var selectedColor = colors[Math.round(Math.random() * colors.length)];
+
+                $("body").css("background-color", selectedColor);
+                $("body").append("<button style='width: 100px;height: 50px;background-color: "+selectedColor+";'>:)</button>");
+
+            }, 100);
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

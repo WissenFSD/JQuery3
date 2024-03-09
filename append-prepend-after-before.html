@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            /*Append ekleme işlemini her zaman sona yapar*/
+
+            $(".append").click(function () {
+
+                $(".list").append("<li>Ankara</li>");
+                /*Prepend ekleme işlemini her zaman ilk sıraya yapar*/
+            });
+            $(".prepend").click(function () {
+
+                $(".list").prepend("<li>İzmir</li>");
+
+            });
+
+            /*After demek mevcut elementin hemen sonrasına yeni bir element eklemek demektir.*/
+            $(".after").click(function () {
+
+                $(".list").after("<ul><li>Antakya</li></ul>");
+
+            });
+            /*Before demek mevcut elementin hemen öncesine yeni bir element eklemek için kullanılır.*/
+            $(".before").click(function () {
+
+                $(".list").before("<ul><li>Manisa</li></ul>");
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button class="append">Append</button>
+    <button class="prepend">Prepend</button>
+    <button class="after">After</button>
+    <button class="before">Before</button>
+    <ul class="list">
+        <li>İstanbul</li>
+    </ul>
+
+</body>
+
+</html>
