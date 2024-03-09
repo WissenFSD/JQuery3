@@ -24,15 +24,14 @@
             $("img").hover(function(){
 
                var selectedImage =  $(this).attr("src");
-                $("#bigpicture").attr("src",selectedImage);
+                $(".bigpicture").attr("src",selectedImage);
 
             });
 
 
             /*slider'in üstünden çıktıktan sonra büyük resim silinsin.*/
             $(".main").mouseleave(function(){
-                
-                $("#bigpicture").removeAttr("src");
+                $(".bigpicture").removeAttr("src");
 
             });
 
@@ -46,7 +45,7 @@
             height: 400px;
             margin-left: auto;
             margin-right: auto;
-            border: 2px solid black;
+            border: 2px solid gray;
         }
         .mainpicture{
 
@@ -54,11 +53,11 @@
             
         }
         .imagemini{
-            width: 150px;
+            width: 23%;
             height: 92px;
             border-radius: 10px;
-            padding-left: 10px;
-            border:2px solid gray
+            padding-left: 6px;
+            border:1px solid gray
         }
         .divimage{
             align-items: center;
@@ -76,7 +75,7 @@
 
 
     <div class="main">
-        <div class="mainpicture"><img id="bigpicture" class="bigpicture"></div>
+        <div class="mainpicture"><img class="bigpicture"></div>
         <div class="divimage">
            <img class="imagemini" src="https://image.hurimg.com/i/hurriyet/75/296x210/65eb7778966e0ad67c151487.jpg">
            <img class="imagemini" src="https://image.hurimg.com/i/hurriyet/75/296x210/65eb96db1c1eb6d1efce58c8.jpg">
