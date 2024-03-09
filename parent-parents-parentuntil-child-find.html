@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".parent").click(function () {
+
+                /*Button üzerinden parent dediğimizde, butonun bir üst evebeny'ini seçmiş oluruz. Bu durumda üst elemen body olmaktadır.*/
+                $(this).parent().css("background-color", "gray");
+            });
+            $(".parents").click(function () {
+
+                /*Button üzerinden parent dediğimizde, butonun bir üst evebeny'ini seçmiş oluruz. Bu durumda üst elemen body olmaktadır.*/
+                $(this).parents().css("border", "2px solid red");
+            });
+            $(".parentsuntil").click(function () {
+
+                /*Button üzerinden parent dediğimizde, butonun bir üst evebeny'ini seçmiş oluruz. Bu durumda üst elemen body olmaktadır.*/
+                $(this).parentsUntil("html").css("border", "2px solid red");
+            });
+            $(".child").click(function () {
+
+                /*Button üzerinden parent dediğimizde, butonun bir üst evebeny'ini seçmiş oluruz. Bu durumda üst elemen body olmaktadır.*/
+                $(".childdiv").children().css("background-color", "gray");
+            });
+            $(".find").click(function () {
+
+                /*Button üzerinden parent dediğimizde, butonun bir üst evebeny'ini seçmiş oluruz. Bu durumda üst elemen body olmaktadır.*/
+                $(".childdiv").find(".selected").css("background-color", "red");
+            });
+
+
+
+        });
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="parent">Parent</button>
+    <button class="parents">Parents</button>
+    <button class="child">Child</button>
+    <button class="find">Find</button>
+
+    <div>
+        <button class="parentsuntil">Parents Until</button>
+    </div>
+    <div class="childdiv">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, architecto!</p>
+        <p class="selected">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis minus sit ipsum commodi
+            laudantium, quos
+            laboriosam molestias assumenda?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quisquam assumenda rem fugit rerum molestias
+            nulla modi a dolor repellendus minima, nostrum dolorem nesciunt, est sint possimus ratione eum, ducimus
+            pariatur optio eaque impedit. Soluta cum sint obcaecati eius quos sunt molestiae distinctio exercitationem
+            cupiditate laborum praesentium facere laudantium sapiente saepe mollitia ullam et, similique aut sed
+            quibusdam quia officiis in quae accusantium? Aliquid labore expedita, reprehenderit neque repellat ratione
+            impedit consequatur illo eum eligendi ipsa necessitatibus iure placeat culpa voluptate repudiandae
+            laudantium esse. Ab, dolore! Asperiores officia eius laudantium. Hic tempore harum vel placeat ea eligendi
+            illo iste inventore!</p>
+    </div>
+</body>
+
+</html>
